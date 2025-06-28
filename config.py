@@ -17,16 +17,16 @@ APP_ID = int(os.environ.get("APP_ID", ""))
 API_HASH = os.environ.get("API_HASH", "")
 
 #Your db channel Id
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", ""))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002838908699"))
 
 #OWNER ID
-OWNER_ID = int(os.environ.get("OWNER_ID", ""))
+OWNER_ID = int(os.environ.get("OWNER_ID", "6299675157"))
 
 #Port
 PORT = os.environ.get("PORT", "8080")
 
 #Database 
-DB_URI = os.environ.get("DATABASE_URL", "")
+DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://bhavsarvivek0509:RuyVumg3ktrl35eA@cluster0.x3feq79.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 DB_NAME = os.environ.get("DATABASE_NAME", "filesharexbot")
 
 #force sub channel id, if you want enable force sub
@@ -40,7 +40,7 @@ START_PIC = os.environ.get("START_PIC","")
 START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
 try:
     ADMINS=[]
-    for x in (os.environ.get("ADMINS", "").split()):
+    for x in (os.environ.get("ADMINS", "6299675157").split()):
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
